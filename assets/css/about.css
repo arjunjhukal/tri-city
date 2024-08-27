@@ -1,0 +1,12 @@
+.about {
+  margin-bottom: 188px;
+}
+.about .section-title {
+  margin-bottom: 40px;
+}
+.about .about-content p:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+.about .about-content p:last-of-type {
+  margin-bottom: 48px;
+}

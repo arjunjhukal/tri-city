@@ -1,5 +1,31 @@
 .news {
+  margin-bottom: 210px;
+
   .section-title {
     margin-bottom: 48px;
+  }
+
+  .news-item {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    .ni-content {
+      padding: 24px 20px 44px;
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        display: inline-block;
+        margin-bottom: 16px;
+      }
+      a {
+        display: block;
+        margin-bottom: 24px;
+        h4 {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 24px;
+          color: #fff;
+        }
+      }
+    }
   }
 }
