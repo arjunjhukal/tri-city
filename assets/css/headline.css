@@ -6,22 +6,23 @@
 }
 .headline .headline-content {
   position: relative;
-}
-.headline .headline-content h1 {
   transform: rotate(3deg);
-  font-size: 60px;
-  line-height: 72px;
-  text-wrap: nowrap;
-  padding: 8px 0;
 }
 .headline .headline-content::before {
-  content: "";
   background-color: #f02626;
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   left: -10px;
   right: -10px;
-  transform: rotate(3deg);
+  transform-origin: -10px -10px;
   z-index: -1;
+}
+.headline .headline-content h1 {
+  font-size: 60px;
+  line-height: 72px;
+  padding: 8px 0;
+  position: relative;
+  text-wrap: nowrap;
 }
