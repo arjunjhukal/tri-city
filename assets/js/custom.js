@@ -15,3 +15,23 @@ $(function () {
     });
   });
 });
+
+$(function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const t1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".features",
+      start: "bottom center",
+      end: "bottom top",
+      scrub: 1,
+      ease: "ease-in-out",
+      markers: {
+        startColor: "green",
+        endColor: "yellow",
+      },
+    },
+  });
+
+  t1.fromTo(".headline-content h1", { x: 50, y: 0 }, { x: -300, y: -20 });
+});
