@@ -26,10 +26,10 @@ $(function () {
       end: "bottom top",
       scrub: 1,
       ease: "ease-in-out",
-      markers: {
-        startColor: "green",
-        endColor: "yellow",
-      },
+      // markers: {
+      //   startColor: "green",
+      //   endColor: "yellow",
+      // },
     },
   });
 
