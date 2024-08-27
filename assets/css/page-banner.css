@@ -1,0 +1,30 @@
+.page-banner {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 70px;
+  background: linear-gradient(360deg, #1d1d1d 3.23%, rgba(29, 29, 29, 0) 26.18%, rgba(29, 29, 29, 0) 71.72%, #1d1d1d 97.32%);
+}
+.page-banner .container,
+.page-banner .pb-content {
+  height: 100%;
+}
+.page-banner .pb-content {
+  position: relative;
+}
+.page-banner .pb-content button.banner-scroll-indicator {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+}
+.page-banner .pb-content button.banner-scroll-indicator img {
+  margin-bottom: 12px;
+}
+.page-banner .pb-content button.banner-scroll-indicator small {
+  font-family: "Cormorant Garamond", sans-serif;
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 700;
+}

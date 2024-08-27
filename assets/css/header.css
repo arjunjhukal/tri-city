@@ -1,0 +1,31 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 24px 88px 24px 72px;
+  z-index: 9;
+}
+.header .header-menu .menu-items {
+  gap: 40px;
+}
+.header .header-menu .menu-items li a {
+  font-family: "League Spartan", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 13px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.header .header-menu .menu-items li a:hover {
+  color: #f02626;
+}
+.header .header-menu .menu-items li.active a {
+  color: #f02626;
+}
+.header .header-menu .menu-items li button.search-btn {
+  width: 20px;
+  height: 20px;
+}
