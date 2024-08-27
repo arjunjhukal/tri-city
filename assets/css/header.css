@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   right: 0;
@@ -10,7 +10,6 @@
   gap: 40px;
 }
 .header .header-menu .menu-items li a {
-  font-family: "League Spartan", sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 13px;
