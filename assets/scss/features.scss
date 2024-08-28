@@ -1,6 +1,4 @@
 .features {
-  margin-bottom: 82px;
-
   .section-title {
     margin-bottom: 104px;
   }
@@ -55,6 +53,16 @@
       }
     }
   }
+
+  .row {
+    > div {
+      &:not(:last-child) {
+        .feature-item {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -64,6 +72,7 @@
         &:not(:last-child) {
           .feature-item {
             position: relative;
+            margin-bottom: 0;
 
             &::after {
               content: "";

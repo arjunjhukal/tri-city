@@ -17,29 +17,6 @@ $(function () {
   });
 
   gsap.registerPlugin(ScrollTrigger);
-
-  // Force reflow and calculate the correct width after everything is loaded
-  // $(window).on("load", function () {
-  //   const headlineWidth = $(".headline-content h1").outerWidth();
-  //   console.log("Correct h1 Width:", headlineWidth);
-
-  //   const t1 = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: ".headline",
-  //       start: "top center",
-  //       end: "+=100%",
-  //       scrub: 1,
-  //       pin: true,
-  //       ease: "ease-in-out",
-  //       markers: {
-  //         startColor: "green",
-  //         endColor: "yellow",
-  //       },
-  //     },
-  //   });
-
-  //   t1.fromTo(".headline-content h1", { x: "50px" }, { x: `-${headlineWidth}px` });
-  // });
 });
 
 $(function () {
@@ -57,10 +34,10 @@ $(function () {
       scrub: 1,
       pin: true,
       ease: "ease-in-out",
-      markers: {
-        startColor: "green",
-        endColor: "yellow",
-      },
+      // markers: {
+      //   startColor: "green",
+      //   endColor: "yellow",
+      // },
     },
   });
 

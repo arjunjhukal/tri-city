@@ -1,4 +1,30 @@
-@media (min-width: 140px) {
+@media (min-width: 768px) {
+  .section-title {
+    h1 {
+      font-size: 80px;
+      line-height: 120px;
+    }
+  }
+
+  .section-gap {
+    margin-bottom: 120px;
+  }
+}
+
+@media (min-width: 992px) {
+  .section-title {
+    h1 {
+      font-size: 124px;
+      line-height: 149px;
+    }
+  }
+
+  .section-gap {
+    margin-bottom: 140px;
+  }
+}
+
+@media (min-width: 1440px) {
   .container {
     max-width: 1468px;
     padding: 0 50px;

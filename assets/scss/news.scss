@@ -1,5 +1,17 @@
 .news {
-  margin-bottom: 210px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -160px;
+    width: 320px;
+    height: 320px;
+    background-image: url(../images/announcement.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
   .section-title {
     margin-bottom: 48px;
@@ -19,11 +31,58 @@
       a {
         display: block;
         margin-bottom: 24px;
+
         h4 {
           font-size: 20px;
           font-weight: 600;
           line-height: 24px;
           color: #fff;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+
+    .ni-image {
+      transform-origin: 0% 100%;
+      transition: all 0.3s ease-in-out;
+      a {
+        display: block;
+      }
+    }
+
+    &:hover {
+      .ni-image {
+        transform: rotate(-2deg);
+      }
+      .ni-content {
+        a {
+          h4 {
+            color: #f02626;
+          }
+        }
+      }
+    }
+  }
+
+  .row {
+    > div {
+      &:not(:last-child) {
+        .news-item {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .news {
+    .row {
+      > div {
+        &:not(:last-child) {
+          .news-item {
+            margin-bottom: 0;
+          }
         }
       }
     }

@@ -60,11 +60,11 @@ button {
 
 .section-title {
   h1 {
-    font-size: 124px;
+    font-size: 60px;
+    line-height: 100px;
     position: relative;
-    padding-right: 28px;
     display: inline-block;
-    line-height: 149px;
+    padding-right: 28px;
 
     &::after {
       content: "";
@@ -83,6 +83,14 @@ button {
     font-weight: 600;
     line-height: 19px;
   }
+
+  .title + .tc-btn {
+    margin-top: 20px;
+  }
+}
+
+.section-gap {
+  margin-bottom: 80px;
 }
 
 .tc-btn {
@@ -219,4 +227,10 @@ button {
       }
     }
   }
+}
+
+.section-with-bg-image {
+  background-image: url(../images/multiple-section-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }

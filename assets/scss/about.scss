@@ -1,6 +1,4 @@
 .about {
-  margin-bottom: 188px;
-
   .section-title {
     margin-bottom: 40px;
   }
@@ -13,6 +11,18 @@
       &:last-of-type {
         margin-bottom: 48px;
       }
+    }
+  }
+
+  .about-image {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .about {
+    .about-image {
+      margin-bottom: 0;
     }
   }
 }
