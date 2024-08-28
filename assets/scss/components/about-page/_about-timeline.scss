@@ -1,0 +1,16 @@
+.about-timeline {
+  .tab-content {
+    .tab-content-box {
+      max-width: unset;
+
+      .tc-content {
+        ul {
+          gap: 32px;
+          li {
+            max-width: 66px;
+          }
+        }
+      }
+    }
+  }
+}

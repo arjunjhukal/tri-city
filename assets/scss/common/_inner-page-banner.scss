@@ -1,0 +1,33 @@
+.inner-page-banner {
+  padding: 256px 0 94px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 20%, transparent);
+  }
+
+  .ipb-content {
+    position: relative;
+    z-index: 2;
+    ul,
+    ol {
+      li,
+      li a {
+        font-weight: 600;
+        line-height: 19px;
+        color: #fff;
+      }
+      li {
+        &::before {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

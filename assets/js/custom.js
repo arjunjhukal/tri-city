@@ -64,9 +64,9 @@ $(function () {
     scrollTrigger: {
       trigger: ".headline",
       start: "top center",
-      end: "+=100%",
+      end: "+=60%",
       scrub: 1,
-      pin: true,
+      // pin: true,
       ease: "ease-in-out",
       // markers: {
       //   startColor: "green",

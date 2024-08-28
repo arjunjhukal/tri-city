@@ -1,5 +1,5 @@
-@import "./components/global.scss";
-@import "./components/global.media.scss";
+@import "./common/global.scss";
+@import "./common/global.media.scss";
 @import "./components/landing-page/page-banner";
 @import "./components/landing-page/about";
 @import "./components/landing-page/features";
@@ -7,3 +7,8 @@
 @import "./components/landing-page/headline";
 @import "./components/landing-page/news";
 @import "./components/landing-page/timeline";
+@import "./common/inner-page-banner.scss";
+@import "./components/about-page/featured-section";
+@import "./components/about-page/about-timeline";
+@import "./components/about-page/team";
+@import "./components/about-page/collaborator";

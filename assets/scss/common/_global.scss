@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: #1d1d1d;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-family: "Rozha One", sans-serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 100px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #fff;
+  -moz-text-fill-color: transparent;
+
+  &.with-icon {
+    display: inline-block;
+    position: relative;
+    padding-right: 24px;
+    width: auto;
+
+    &::after {
+      content: "";
+      width: 15px;
+      height: 10px;
+      background-image: url(../images/btn-bg.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      bottom: 36px;
+      right: 0;
+    }
+  }
+}
+
+p {
+  margin-bottom: 0;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+
+  &:hover {
+    color: initial;
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Utility Classes*/
+
+.section-title {
+  h1 {
+    position: relative;
+    display: inline-block;
+    padding-right: 24px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 35px;
+      width: 15px;
+      height: 10px;
+      background: url(../images/icons/shape.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+  }
+
+  .title + .tc-btn {
+    margin-top: 20px;
+  }
+}
+
+.section-gap {
+  margin-bottom: 80px;
+}
+
+.tc-btn {
+  &-primary {
+    display: inline-block;
+    span {
+      display: inline-block;
+      padding: 16px 28px;
+      border-radius: 5px;
+      background-color: #f02626;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 17px;
+      text-transform: uppercase;
+      margin: 6px;
+    }
+
+    .shape {
+      display: block;
+      width: 100%;
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: #fff;
+        transform-origin: 0% 0%;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &::before {
+        width: 12px;
+        height: 1px;
+      }
+
+      &::after {
+        width: 1px;
+        height: 12px;
+      }
+
+      &.end {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      color: #fff;
+
+      .shape {
+        &::before {
+          transform: scaleX(4);
+        }
+
+        &::after {
+          transform: scaleY(2);
+        }
+      }
+    }
+  }
+  &-text {
+    position: relative;
+    span {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: #f02626;
+      position: relative;
+      padding: 20px 40px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url(../images/btn-bg.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        transform: scaleX(0.062) scaleY(0.11);
+        transform-origin: 88% 54%;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/icons/button-side-icon.svg);
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &::after {
+      transform: rotate(180deg);
+      bottom: 0px;
+      right: 0px;
+    }
+
+    &::before {
+      top: 0px;
+      left: 0px;
+    }
+
+    &:hover {
+      span {
+        color: #fff;
+
+        &::before {
+          transform: scale(1);
+        }
+      }
+
+      &::after,
+      &::before {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &::after {
+        bottom: -6px;
+        right: -12px;
+      }
+
+      &::before {
+        top: -8px;
+        left: -8px;
+      }
+    }
+  }
+}
+
+.section-with-bg-image {
+  background-image: url(../images/multiple-section-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
