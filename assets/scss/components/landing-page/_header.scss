@@ -3,7 +3,7 @@
   left: 0;
   top: 0;
   right: 0;
-  padding: 24px 88px 24px 72px;
+  padding: 24px;
   z-index: 9;
 
   .header-menu {
@@ -96,19 +96,36 @@
 
 @media (min-width: 992px) {
   .header {
+    padding: 24px 88px 24px 72px;
     .header-menu {
+      position: unset;
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+      border: none;
+      max-width: unset;
+
       .menu-items {
         gap: 40px;
+        padding: 0;
         li {
           a {
+            padding: 0;
+            text-wrap: nowrap;
             &:hover {
+              background-color: transparent;
               color: #f02626;
             }
           }
           &.active {
             a {
+              background-color: transparent;
               color: #f02626;
             }
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 0;
           }
         }
       }

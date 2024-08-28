@@ -192,6 +192,10 @@
           }
         }
       }
+
+      .tc-image {
+        margin-bottom: 40px;
+      }
     }
   }
 
@@ -225,5 +229,17 @@
     right: 264px;
     z-index: 3;
     opacity: 0.9;
+  }
+}
+
+@media (min-width: 992px) {
+  .timeline {
+    .tab-content {
+      .tab-content-box {
+        .tc-image {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }
