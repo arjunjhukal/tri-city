@@ -535,4 +535,16 @@ textarea {
   &:not(:last-of-type) {
     margin-bottom: 56px;
   }
+
+  &.aside-item-listing-v2 {
+    ul {
+      li {
+        &:not(:last-child) {
+          padding-bottom: 12px;
+          margin-bottom: 12px;
+          border-bottom: 1px solid $transparentWhite;
+        }
+      }
+    }
+  }
 }

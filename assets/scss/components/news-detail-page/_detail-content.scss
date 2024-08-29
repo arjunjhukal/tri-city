@@ -31,6 +31,7 @@
     strong {
       color: $red;
       font-weight: 500;
+      display: block;
     }
 
     h4 {
@@ -126,6 +127,7 @@
     color: #fff;
     font-weight: 600;
     position: relative;
+
     span {
       font-size: 14px;
       font-weight: 400;
@@ -159,6 +161,10 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+    }
+
+    &:hover {
+      color: $red;
     }
   }
 }

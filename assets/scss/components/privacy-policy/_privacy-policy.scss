@@ -1,0 +1,55 @@
+.privacy {
+  padding: 72px 0 124px;
+
+  .privacy-content {
+    p {
+      &.date {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 18px;
+        span {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 14px;
+          text-transform: uppercase;
+        }
+      }
+
+      &:not(.date) {
+        margin-bottom: 24px;
+      }
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 32px;
+      margin-top: 68px;
+      margin-bottom: 12px;
+
+      &:first-of-type {
+        margin-top: 48px;
+      }
+    }
+
+    strong {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 24px;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    > ul,
+    > ol {
+      padding-left: 24px;
+      li {
+        list-style-type: disc;
+
+        &::marker {
+          color: $red;
+        }
+      }
+    }
+  }
+}
