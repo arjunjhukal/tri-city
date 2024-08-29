@@ -379,7 +379,6 @@ textarea {
 }
 
 .table-wrapper {
-  position: relative;
   margin-bottom: 32px;
   background: url(../images/table-bg.svg);
   background-size: cover;
@@ -437,18 +436,6 @@ textarea {
         padding-top: 20px;
       }
     }
-  }
-
-  &::before {
-    content: "";
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-image: url(../images/shape-06.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 }
 

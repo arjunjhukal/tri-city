@@ -42,12 +42,19 @@
 
     > ul,
     > ol {
-      padding-left: 24px;
       li {
-        list-style-type: disc;
+        position: relative;
+        padding-left: 16px;
 
-        &::marker {
-          color: $red;
+        &::before {
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 4px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $red;
         }
       }
     }

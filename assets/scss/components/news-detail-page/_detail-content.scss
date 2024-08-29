@@ -31,7 +31,6 @@
     strong {
       color: $red;
       font-weight: 500;
-      display: block;
     }
 
     h4 {
@@ -54,15 +53,26 @@
         &:not(:last-child) {
           margin-bottom: 24px;
         }
+        strong {
+          display: block;
+        }
       }
     }
 
     > ul {
       li {
-        list-style-type: disc;
+        position: relative;
+        padding-left: 16px;
 
-        &::marker {
-          color: $red;
+        &::before {
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 4px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $red;
         }
       }
     }
@@ -77,13 +87,20 @@
 
 .testimonial-block {
   margin: 32px 0;
-  background: url(../images/icons/testimonail-shape.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 56px 92px 52px 40px;
+  padding: 40px 92px 40px 40px;
   gap: 48px;
-  background-color: #373737;
   border-radius: 12px;
+  position: relative;
+
+  &::before {
+    content: "";
+    background: url(../images/icons/testimonail-shape.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+  }
 
   .quote {
     min-width: 160px;
