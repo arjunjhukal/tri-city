@@ -57,14 +57,19 @@ p {
 }
 
 ul,
+ol,
 li {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+table {
+  margin: 0 !important;
+}
+
 a {
-  color: initial;
+  color: #fff;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   display: inline-block;
@@ -146,6 +151,18 @@ textarea {
 
 .section-gap {
   margin-bottom: 80px;
+}
+
+.tc-btn-red {
+  color: $red;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+
+  &:hover {
+    color: #f02626;
+    opacity: 0.8;
+  }
 }
 
 .bordered-aside {
@@ -282,6 +299,19 @@ textarea {
       display: block;
     }
   }
+
+  &.optional {
+    position: relative;
+
+    &::after {
+      content: "(optional)";
+      color: rgba(255, 255, 255, 0.6);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 16px;
+    }
+  }
 }
 
 .section-with-bg-image {
@@ -341,6 +371,80 @@ textarea {
         }
       }
     }
+  }
+}
+
+.table-wrapper {
+  position: relative;
+  margin-bottom: 32px;
+  background: url(../images/table-bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 36px 40px;
+  background-color: #ffffff03;
+  border-radius: 12px;
+
+  table {
+    &.table {
+      --bs-table-bg: $transparentWhite;
+      --bs-table-color: #fff;
+      border: none;
+    }
+  }
+
+  .thead {
+    margin-bottom: 24px;
+  }
+
+  th {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 24px !important;
+  }
+
+  th,
+  td {
+    border: none;
+
+    &:first-child {
+      padding-right: 36px;
+    }
+
+    &:nth-child(even) {
+      padding: 0 36px;
+      max-width: 335px;
+    }
+  }
+
+  td {
+    font-weight: 400;
+
+    &:nth-child(even) {
+      font-family: "Mukta", sans-serif;
+    }
+  }
+
+  tr {
+    &:not(:first-child) {
+      td {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(../images/shape-06.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
