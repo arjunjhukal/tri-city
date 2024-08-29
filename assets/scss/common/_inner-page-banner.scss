@@ -12,6 +12,20 @@
     background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 20%, transparent);
   }
 
+  &::after {
+    content: "";
+    width: 634px;
+    height: 634px;
+    background-image: url(../images/shape-04.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: -10%;
+    top: 70%;
+    z-index: -1;
+  }
+
   .ipb-content {
     position: relative;
     z-index: 2;

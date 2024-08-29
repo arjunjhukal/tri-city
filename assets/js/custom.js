@@ -126,10 +126,10 @@ $(function () {
       start: "top center",
       end: "center center",
       scrub: 1,
-      markers: {
-        startColor: "green",
-        endColor: "yellow",
-      },
+      // markers: {
+      //   startColor: "green",
+      //   endColor: "yellow",
+      // },
     },
   });
 
