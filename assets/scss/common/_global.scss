@@ -75,7 +75,7 @@ a {
   display: inline-block;
 
   &:hover {
-    color: initial;
+    color: inherit;
   }
 
   &.open-in-new-tab {
@@ -153,18 +153,6 @@ textarea {
   margin-bottom: 80px;
 }
 
-.tc-btn-red {
-  color: $red;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
-
-  &:hover {
-    color: #f02626;
-    opacity: 0.8;
-  }
-}
-
 .bordered-aside {
   border-left: 1px solid $transparentWhite;
   padding-left: 32px;
@@ -175,10 +163,41 @@ textarea {
   }
 }
 
+.tc-btn-red {
+  color: $red;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+
+  &:hover {
+    color: #f02626;
+    opacity: 0.8;
+  }
+
+  &.btn-red-v2 {
+    position: relative;
+    padding-right: 20px;
+
+    &::after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: url(../images/icons/angle-down-red.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
 .tc-btn {
   &-primary {
     display: inline-block;
-    padding: 16px 24px;
+    padding: 16px 0;
+    text-align: center;
     width: 168px;
     border-radius: 5px;
     color: #fff;
@@ -187,9 +206,17 @@ textarea {
     line-height: 17px;
     text-transform: uppercase;
     margin: 6px;
-    background-image: url(../images/icons/primary-btn-bg.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url(../images/icons/primary-btn-bg.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: -1;
+    }
 
     &:hover {
       color: #fff;
@@ -272,6 +299,15 @@ textarea {
       }
     }
   }
+}
+
+.tag {
+  padding: 4px 16px;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
 }
 
 .input-field {

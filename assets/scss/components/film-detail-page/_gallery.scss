@@ -1,0 +1,31 @@
+.gallery {
+  .section-title {
+    margin-bottom: 88px;
+  }
+
+  .gallery-item {
+    margin-bottom: 16px;
+  }
+
+  .row {
+    > div {
+      &:nth-child(5n + 1),
+      &:nth-child(5n + 2),
+      &:nth-child(5n + 3),
+      &:nth-child(5n + 4) {
+        .gallery-item {
+          transform: perspective(40px) rotateY(1deg);
+        }
+      }
+
+      &:nth-child(5n + 5),
+      &:nth-child(5n + 6),
+      &:nth-child(5n + 7),
+      &:nth-child(5n + 8) {
+        .gallery-item {
+          transform: perspective(40px) rotateY(-1deg);
+        }
+      }
+    }
+  }
+}

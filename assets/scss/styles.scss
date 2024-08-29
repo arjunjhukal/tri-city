@@ -1,5 +1,6 @@
 @import "./common/global.scss";
 @import "./common/global.media.scss";
+@import "./common/text-with-video";
 @import "./components/landing-page/page-banner";
 @import "./components/landing-page/about";
 @import "./components/landing-page/features";
@@ -8,7 +9,6 @@
 @import "./components/landing-page/news";
 @import "./components/landing-page/timeline";
 @import "./common/inner-page-banner.scss";
-@import "./components/about-page/featured-section";
 @import "./components/about-page/about-timeline";
 @import "./components/about-page/team";
 @import "./components/about-page/collaborator";
@@ -18,3 +18,8 @@
 @import "./components/news-detail-page/detail-featured";
 @import "./components/news-detail-page/detail-content";
 @import "./components/privacy-policy/privacy-policy";
+@import "./components/film-detail-page/film-featured-section";
+@import "./components/film-detail-page/film-featured-video";
+@import "./components/film-detail-page/gallery";
+@import "./components/film-detail-page/review";
+@import "./components/film-detail-page/related-film";
