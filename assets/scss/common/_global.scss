@@ -169,6 +169,10 @@ textarea {
   border-left: 1px solid $transparentWhite;
   padding-left: 32px;
   height: calc(100% - 64px);
+
+  &.bordered-aside-v2 {
+    height: 100%;
+  }
 }
 
 .tc-btn {
