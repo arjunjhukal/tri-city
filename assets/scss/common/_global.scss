@@ -1,4 +1,5 @@
 $red: #f02626;
+$transparentWhite: rgba(255, 255, 255, 0.1);
 
 * {
   margin: 0;
@@ -71,12 +72,45 @@ a {
   &:hover {
     color: initial;
   }
+
+  &.open-in-new-tab {
+    span {
+      position: relative;
+      padding-right: 16px;
+
+      &::after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background: url(../images/icons/arrow-tilted.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: 0;
+        bottom: 4px;
+      }
+    }
+  }
 }
 
 button {
   background-color: transparent;
   border: none;
   outline: none;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+
+  &::placeholder {
+    color: #fff;
+  }
 }
 
 /* Utility Classes*/
@@ -117,58 +151,20 @@ button {
 .tc-btn {
   &-primary {
     display: inline-block;
-    span {
-      display: inline-block;
-      padding: 16px 28px;
-      border-radius: 5px;
-      background-color: #f02626;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 17px;
-      text-transform: uppercase;
-      margin: 6px;
-    }
-
-    .shape {
-      display: block;
-      width: 100%;
-      &::after,
-      &::before {
-        content: "";
-        position: absolute;
-        background-color: #fff;
-        transform-origin: 0% 0%;
-        transition: all 0.3s ease-in-out;
-      }
-
-      &::before {
-        width: 12px;
-        height: 1px;
-      }
-
-      &::after {
-        width: 1px;
-        height: 12px;
-      }
-
-      &.end {
-        transform: rotate(180deg);
-      }
-    }
+    padding: 16px 28px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    text-transform: uppercase;
+    margin: 6px;
+    background-image: url(../images/icons/primary-btn-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &:hover {
       color: #fff;
-
-      .shape {
-        &::before {
-          transform: scaleX(4);
-        }
-
-        &::after {
-          transform: scaleY(2);
-        }
-      }
     }
   }
   &-text {
@@ -250,8 +246,86 @@ button {
   }
 }
 
+.input-field {
+  margin-bottom: 16px;
+
+  input,
+  textarea,
+  select {
+    background: $transparentWhite;
+    padding: 20px 16px;
+
+    + small {
+      display: none;
+      color: $red;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  select {
+    option {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  &.error {
+    small {
+      margin-top: 4px;
+      display: block;
+    }
+  }
+}
+
 .section-with-bg-image {
   background-image: url(../images/multiple-section-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.news-item {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  .ni-content {
+    padding: 24px 20px 44px;
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+    a {
+      display: block;
+      margin-bottom: 24px;
+
+      h4 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  .ni-image {
+    transform-origin: 0% 100%;
+    transition: all 0.3s ease-in-out;
+    a {
+      display: block;
+    }
+  }
+
+  &:hover {
+    .ni-image {
+      transform: rotate(-2deg);
+    }
+    .ni-content {
+      a {
+        h4 {
+          color: #f02626;
+        }
+      }
+    }
+  }
 }

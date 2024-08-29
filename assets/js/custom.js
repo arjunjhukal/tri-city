@@ -117,3 +117,31 @@ $(function () {
     observer.observe(this);
   });
 });
+
+/* Action Animation */
+$(function () {
+  const actionTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".contact",
+      start: "top center",
+      end: "center center",
+      scrub: 1,
+      markers: {
+        startColor: "green",
+        endColor: "yellow",
+      },
+    },
+  });
+
+  actionTimeline.fromTo(
+    ".contact-info",
+    {
+      "--after-left": "-8px",
+      "--after-rotate": "0deg",
+    },
+    {
+      "--after-left": "10px",
+      "--after-rotate": "10.4deg",
+    }
+  );
+});
