@@ -3,4 +3,116 @@
     margin-bottom: 72px;
     text-align: center;
   }
+
+  .collab-tabs {
+    max-width: 248px;
+    li {
+      button {
+        background: url(../images/collab-tab-bg.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        padding: 24px 0;
+        color: #fff;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        border-radius: 8px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &:hover {
+        button {
+          background-color: #f02626;
+          background-image: unset;
+        }
+      }
+
+      &.active {
+        button {
+          background-color: #f02626;
+
+          background-image: unset;
+        }
+      }
+    }
+  }
+
+  aside {
+    &.entertainment {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 32px 24px;
+
+      .entertainment-logo {
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      ul {
+        li {
+          &:not(:last-child) {
+            margin-bottom: 32px;
+          }
+          strong,
+          span {
+            display: block;
+          }
+          strong {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 23px;
+          }
+          span {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .collab-item {
+    h3 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 38px;
+      margin-bottom: 4px;
+    }
+    span {
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.5);
+      display: inline-block;
+      margin-bottom: 24px;
+    }
+    p {
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+
+    .ci-image {
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .collaborator {
+    .collab-tabs,
+    aside.entertainment {
+      position: sticky;
+      top: 0;
+    }
+  }
 }

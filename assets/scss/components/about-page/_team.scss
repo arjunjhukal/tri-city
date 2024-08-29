@@ -7,6 +7,8 @@
     margin-bottom: 68px;
   }
   .team-member {
+    background: #ffffff03;
+
     &:first-child {
       position: relative;
 
@@ -126,7 +128,7 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    &:nth-child(even) {
+    &:nth-child(odd) {
       .row {
         flex-direction: row-reverse;
       }

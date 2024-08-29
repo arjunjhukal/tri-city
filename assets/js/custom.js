@@ -77,3 +77,43 @@ $(function () {
 
   t1.fromTo(".headline-content h1", { x: "50px" }, { x: `-${translateAmount}px` });
 });
+
+/* About Page Collaborator Tab */
+$(function () {
+  $(".collab-tabs button").on("click", function () {
+    $(".collab-tabs li").removeClass("active");
+
+    $(this).parent().addClass("active");
+
+    var target = $(this).text().toLowerCase().replace(/ /g, "_");
+
+    $("#" + target)[0].scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+
+  // Intersection Observer callback
+  function handleIntersection(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        $(".collab-tabs li").removeClass("active");
+
+        var id = entry.target.id;
+
+        $(".collab-tabs button").each(function () {
+          if ($(this).text().toLowerCase().replace(/ /g, "_") === id) {
+            $(this).parent().addClass("active");
+          }
+        });
+      }
+    });
+  }
+
+  var observer = new IntersectionObserver(handleIntersection, {
+    threshold: 0.5,
+  });
+
+  $(".collab-item").each(function () {
+    observer.observe(this);
+  });
+});

@@ -14,6 +14,14 @@
     top: -44%;
   }
 
+  .afs-image {
+    video {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+    }
+  }
+
   .afs-header {
     margin-bottom: 96px;
   }
