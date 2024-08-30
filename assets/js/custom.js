@@ -84,6 +84,35 @@ $(function () {
       },
     ],
   });
+
+  /* Dynamic Rating */
+
+  $(".review-rating").each(function () {
+    var currentRating = $(this).attr("data-rating");
+    var ratingValue = parseFloat(currentRating);
+    var ratingBeforeDecimal = Math.floor(ratingValue);
+    var ratingAfterDecimal = ratingValue - ratingBeforeDecimal;
+
+    var widthPercentage = ratingAfterDecimal * 100;
+
+    if (ratingAfterDecimal >= 0) {
+      $(this)
+        .find("li")
+        .eq(ratingBeforeDecimal)
+        .find(".filled-star")
+        .css("width", widthPercentage + "%");
+    }
+
+    $(this)
+      .find("li")
+      .each(function (index) {
+        if (index > ratingBeforeDecimal) {
+          $(this).find(".filled-star").css("width", "0%");
+        }
+      });
+
+    console.log({ currentRating, ratingBeforeDecimal, widthPercentage }); // Log the details
+  });
 });
 
 $(function () {
@@ -99,12 +128,8 @@ $(function () {
       start: "top center",
       end: "+=60%",
       scrub: 1,
-      // pin: true,
+
       ease: "ease-in-out",
-      // markers: {
-      //   startColor: "green",
-      //   endColor: "yellow",
-      // },
     },
   });
 

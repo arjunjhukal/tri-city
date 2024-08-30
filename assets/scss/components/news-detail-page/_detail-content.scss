@@ -188,6 +188,7 @@
 
 .comment-block {
   margin-top: 100px;
+
   h2 {
     font-size: 32px;
     font-weight: 600;
@@ -197,46 +198,9 @@
   .comment-form-wrapper {
     margin-bottom: 56px;
   }
-
   .comment {
     padding-bottom: 36px;
     margin-bottom: 36px;
     border-bottom: 1px solid $transparentWhite;
-
-    strong {
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 22px;
-      display: block;
-      margin-bottom: 4px;
-    }
-    span {
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 17px;
-      display: block;
-    }
-    p {
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 23px;
-    }
-
-    .ac-user {
-      margin-bottom: 16px;
-      gap: 16px;
-
-      .acu-profile {
-        background: url(../images/collab-tab-bg.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 44px;
-        height: 44px;
-        text-align: center;
-        strong {
-          line-height: 44px;
-        }
-      }
-    }
   }
 }
