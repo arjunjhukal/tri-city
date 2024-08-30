@@ -11,10 +11,18 @@
       .ts-item {
         position: relative;
         margin: 0 36px;
-        background-color: $transparentWhite;
+        padding: 76px 0 48px;
+
+        &::before {
+          content: "";
+          inset: 0;
+          position: absolute;
+          background: url(../images/testimonial-bg.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
 
         .tsi-content-box {
-          padding: 76px 0 48px;
           text-align: center;
           max-width: 846px;
           margin: 0 auto;
@@ -24,6 +32,7 @@
           max-width: 52px;
           margin: 0 auto 32px;
         }
+
         h4 {
           font-size: 28px;
           font-weight: 700;
@@ -49,6 +58,55 @@
           }
         }
       }
+    }
+  }
+}
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  li {
+    width: 30px;
+    height: 20px;
+    position: relative;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &::before {
+      background-image: url(../images/icons/slider-dots-bg.svg);
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &::after {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 8px;
+      background-image: url(../images/icons/slider-dots.svg);
+    }
+
+    &.slick-active {
+      &::before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    * {
+      display: none;
     }
   }
 }

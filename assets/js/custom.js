@@ -143,10 +143,14 @@ $(function () {
 
   /* Testimonial Slider */
   $(".testimonial-slider").slick({
-    slidesToShow: 1.3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     dots: true,
+    appendDots: $(".custom-slider-dots"),
+    infinite: true,
+    centerMode: true,
+    centerPadding: "10%",
   });
 });
 
