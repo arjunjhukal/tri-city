@@ -27,19 +27,7 @@ $(function () {
     });
   });
 
-  /* Timeline tab  */
-  $(".timeline-tabs li").each(function (index) {
-    $(this).click(function () {
-      $(".timeline-tabs li").removeClass("active");
-      $(this).addClass("active");
-
-      $(".timeline .tab-content-box").removeClass("active");
-      $(".timeline .tab-content-box").eq(index).addClass("active");
-    });
-  });
-
   /* Mobile Menu Toggler */
-
   $(".ham-icon").click(function () {
     MobileMenuActiveHandler();
 
@@ -48,8 +36,53 @@ $(function () {
     });
   });
 
+  /* Overlay Click Handler */
   $(".overlay").click(function () {
     HandleOverlayClick();
+  });
+
+  /* TimeLine Slider */
+
+  $(".timeline-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: false,
+    dots: false,
+    asNavFor: ".timeline-tabs",
+  });
+
+  $(".timeline-tabs").slick({
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    infinite: false,
+    arrows: false,
+    dots: false,
+    focusOnSelect: true,
+    asNavFor: ".timeline-slider",
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
 });
 
