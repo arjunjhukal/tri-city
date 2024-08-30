@@ -110,18 +110,57 @@
         gap: 40px;
         padding: 0;
         li {
+          position: relative;
           a {
             padding: 0;
             text-wrap: nowrap;
             &:hover {
               background-color: transparent;
-              color: #f02626;
+              &::before,
+              &::after {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+
+            &::before,
+            &::after {
+              content: "";
+              position: absolute;
+              opacity: 0;
+              visibility: hidden;
+              transition: all 0.3s ease-in-out;
+            }
+
+            &::before {
+              background: url(../images/icons/active-menu-shape.svg);
+              background-repeat: no-repeat;
+              background-size: contain;
+              width: 32px;
+              height: 38px;
+              top: -40px;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+
+            &::after {
+              background: radial-gradient(50% 50% at 50% 50%, #ff0000 0%, rgba(255, 0, 0, 0.1) 100%);
+              width: 60px;
+              height: 6px;
+              bottom: -12px;
+              left: 50%;
+              transform: translateX(-50%);
             }
           }
+
           &.active {
             a {
               background-color: transparent;
-              color: #f02626;
+              &::before,
+              &::after {
+                opacity: 1;
+                visibility: visible;
+              }
             }
           }
 
