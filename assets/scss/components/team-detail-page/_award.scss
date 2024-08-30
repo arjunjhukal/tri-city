@@ -1,0 +1,72 @@
+.award {
+  .section-title {
+    margin-bottom: 56px;
+    p {
+      max-width: 672px;
+    }
+  }
+
+  .award-slider-wrapper {
+    position: relative;
+    .award-slider {
+      margin: 0 -12px;
+      .as-item {
+        padding: 0 12px;
+        .asi-icon {
+          max-width: 72px;
+          margin-bottom: 24px;
+        }
+        .asi-content {
+          h3 {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 28px;
+            margin-bottom: 8px;
+          }
+          p {
+            color: $red;
+            span {
+              &:last-child {
+                &::before {
+                  content: "";
+                  display: inline-block;
+                  width: 4px;
+                  height: 4px;
+                  border-radius: 50%;
+                  background-color: $red;
+                  vertical-align: middle;
+                  margin: 0 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .prev-btn,
+    .next-btn {
+      padding: 8px 16px;
+      position: absolute;
+      z-index: 4;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $transparentWhite;
+
+      &.slick-disabled {
+        opacity: 0.2;
+      }
+    }
+
+    .prev-btn {
+      left: -72px;
+      transform-origin: 100% 50%;
+      transform: perspective(10px) rotateY(-3deg);
+    }
+    .next-btn {
+      right: -72px;
+      transform-origin: 0% 50%;
+      transform: perspective(10px) rotateY(3deg);
+    }
+  }
+}

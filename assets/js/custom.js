@@ -113,6 +113,41 @@ $(function () {
 
     console.log({ currentRating, ratingBeforeDecimal, widthPercentage }); // Log the details
   });
+
+  /* Award Slider */
+  $(".award-slider").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: false,
+    prevArrow: $(".prev-btn"),
+    nextArrow: $(".next-btn"),
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+  /* Testimonial Slider */
+  $(".testimonial-slider").slick({
+    slidesToShow: 1.3,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+  });
 });
 
 $(function () {

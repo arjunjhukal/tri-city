@@ -145,6 +145,7 @@ textarea {
   }
   > p {
     max-width: 545px;
+    margin: 0 auto;
   }
 
   .title + .tc-btn {
@@ -160,20 +161,6 @@ textarea {
 .tilt-left {
   transform-origin: 100% 80%;
   transform: perspective(400px) rotateY(-1.5deg);
-}
-
-.shaped-image {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(../images/image-shape.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
 }
 
 .section-gap {

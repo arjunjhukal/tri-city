@@ -1,0 +1,54 @@
+.testimonials {
+  overflow: hidden;
+
+  .section-title {
+    margin-bottom: 72px;
+  }
+
+  .testimonial-slider-wrapper {
+    .testimonial-slider {
+      margin: 0 -36px;
+      .ts-item {
+        position: relative;
+        margin: 0 36px;
+        background-color: $transparentWhite;
+
+        .tsi-content-box {
+          padding: 76px 0 48px;
+          text-align: center;
+          max-width: 846px;
+          margin: 0 auto;
+        }
+
+        .tsi-quote {
+          max-width: 52px;
+          margin: 0 auto 32px;
+        }
+        h4 {
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 35px;
+          margin-bottom: 64px;
+        }
+
+        .reviewer {
+          .reviewer-image {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            margin: 0 auto 8px;
+          }
+          .reviewer-content {
+            h5 {
+              font-size: 24px;
+              font-weight: 500;
+              line-height: 34px;
+              margin-bottom: 4px;
+              color: $red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

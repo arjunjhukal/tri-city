@@ -50,6 +50,8 @@
 
 .team-featured {
   position: relative;
+  padding-bottom: 0;
+  margin-bottom: 100px;
 
   h1 {
     margin-bottom: 68px;
@@ -75,5 +77,19 @@
   }
   &::after {
     right: 0;
+  }
+
+  .socials {
+    li {
+      &:first-child {
+        a {
+          svg {
+            path {
+              fill: $red;
+            }
+          }
+        }
+      }
+    }
   }
 }
