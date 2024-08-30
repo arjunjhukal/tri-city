@@ -1,0 +1,79 @@
+.page-featured {
+  padding: 140px 0 64px;
+  margin-bottom: 64px;
+
+  &:not(.team-featured) {
+    border-bottom: 1px solid $transparentWhite;
+  }
+
+  ul,
+  ol {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 16px;
+
+    li {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 17px;
+
+      &:not(:first-child) {
+        list-style-type: disc;
+      }
+    }
+
+    &.socials {
+      gap: 20px;
+      margin-top: 32px;
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+
+    + span {
+      margin-top: 4px;
+    }
+  }
+  p {
+    margin-top: 32px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+  }
+}
+
+.team-featured {
+  position: relative;
+
+  h1 {
+    margin-bottom: 68px;
+    -webkit-text-stroke: 1px #fff;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    background: url(../images/circle-06.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 633px;
+    height: 633px;
+    z-index: -1;
+  }
+
+  &::before {
+    left: 0;
+    transform: rotate(270deg);
+  }
+  &::after {
+    right: 0;
+  }
+}

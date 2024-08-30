@@ -77,6 +77,12 @@
       }
     }
   }
+
+  &.fixed {
+    position: fixed;
+    background: radial-gradient(circle, transparent 50%, $transparentWhite 100%);
+    backdrop-filter: blur(4px);
+  }
 }
 
 .overlay {
